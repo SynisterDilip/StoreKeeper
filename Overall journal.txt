@@ -1,0 +1,99 @@
+
+
+Transactions 										Account Type			Dr / CR
+-------------------------------------------------------------------------------------------
+
+1. Add Products (Or Add Product Stocks)
+	If stock is increased;												
+		- Product Asset Increment					Product Acc.			Dr.					
+		- Outgoing Cash								Cash Acc.				Cr.
+
+
+
+2. Remove Products (Or Decrease Product Stocks)
+	If stock is present on the product;				
+		- Product Asset Decrement					Product Acc.			Cr.
+		- Cash may or maynot be refunded			Cash Acc.				Dr. or Null (loss)
+
+
+
+2. Product Sales
+		- Product Asset Decrement					Product Acc.			Cr.		
+
+	A watch is sold in Rs. 1000 to Mr. XYZ.	
+
+	If Payment is done Hand to Hand;		
+		- Incoming Cash								Cash Acc.				Dr.
+
+		<Journal  Entry>
+		-------------------------------------------------------------------------
+		Cash A/C   		Dr. 	Rs. 1000
+		To Watch A/C 	Cr.		Rs. 1000
+    	
+    If Payment is done in credit;
+		- No cash Transactions						Null					Null	
+		- Cash Asset Increment  					Customer Acc.			Cr.
+
+		<Journal  Entry>
+		-------------------------------------------------------------------------
+		Company A/C 		Dr. 	Rs. 1000
+		To Mr. XYZ A/C 		Cr.		Rs. 1000
+
+	If Payment is done in half payment with credit;
+		- Incoming Cash (partial)					Cash Acc.				Dr.	
+		- Cash Asset Increment						Customer Acc.			Cr.
+
+		<Journal  Entry>
+		-------------------------------------------------------------------------
+		Company A/C 		Dr. 	Rs. 1000
+		To Mr. XYZ A/C 		Cr.		Rs. 500
+		To Watch A/C 		Cr.		Rs. 500
+
+
+3. Product Purchase through Bill
+		- Product Asset Increment					Product Acc				Dr.
+
+	If Payment is done Hand to Hand;		
+		- Outgoing Cash 							Cash Acc.				Cr.
+    
+    If Payment is done in credit;
+		- No cash Transactions 						Null					Null
+		- Cash Liability Increment 					Supplier Acc.			Dr.
+
+	If Payment is done in half payment with credit;
+		- Outgoing Cash (partial)					Cash Acc.				Cr.
+		- Cash Liability Increment					Supplier Acc.			Dr.
+
+
+
+4.	Sales Rejection
+		- Product Asset Increment					Product Acc.			Dr.
+		- Outgoing cash 							Cash Acc. 				Cr.
+
+
+
+5.  Purchase Rejection Through Bill
+		- Product Asset Decrement					Product Acc.			Cr.
+		- Incoming cash 							Cash Acc.				Dr.
+
+
+
+4. Credits Payment by Customers
+		- Incoming cash 							Cash Acc.				Dr.
+		- Cash Asset Decrement						Customer Acc.			Dr.
+
+
+
+5. Debits Payment to Supplier
+		- Outgoing Cash 							Cash Acc.				Cr.
+		- Cash Liabilities Decrement				Supplier Acc.			Cr.
+
+
+
+6. Miscellaneous Assets Entries
+		- (Asset Name) Asset Increment				(Asset Name) Acc		Cr.
+
+
+
+7. Miscellaneous Liabilities Entries
+		- (Liabilitiy Name) Liability Increment		(Liability Name) Acc.	Dr.			
